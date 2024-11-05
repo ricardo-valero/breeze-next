@@ -1,13 +1,13 @@
 'use client'
 
+import AuthSessionStatus from '@/app/(auth)/AuthSessionStatus'
 import Button from '@/components/Button'
 import Input from '@/components/Input'
 import InputError from '@/components/InputError'
 import Label from '@/components/Label'
 import { useAuth } from '@/hooks/auth'
-import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import AuthSessionStatus from '@/app/(auth)/AuthSessionStatus'
+import { useEffect, useState } from 'react'
 
 const PasswordReset = () => {
     const searchParams = useSearchParams()
@@ -71,10 +71,7 @@ const PasswordReset = () => {
                         required
                     />
 
-                    <InputError
-                        messages={errors.password}
-                        className="mt-2"
-                    />
+                    <InputError messages={errors.password} className="mt-2" />
                 </div>
 
                 {/* Confirm Password */}
